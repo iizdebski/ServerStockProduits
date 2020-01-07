@@ -37,4 +37,9 @@ public class ProduitService implements ICrudService<Produit, Long> {
         produit.setId(id);
         produitRepository.delete(produit);
     }
+
+    @Override
+    public void saveAll(Iterable<Produit> iterable){
+        produitRepository.saveAll(iterable);
+    }
 }

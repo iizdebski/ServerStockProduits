@@ -37,4 +37,9 @@ public class UserService implements ICrudService<User, Long> {
         user.setId(id);
         userRepository.delete(user);
     }
+
+    @Override
+    public void saveAll(Iterable<User> iterable) {
+        userRepository.saveAll(iterable);
+    }
 }
