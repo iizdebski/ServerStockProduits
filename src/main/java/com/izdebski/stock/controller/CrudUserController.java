@@ -11,7 +11,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @RestController
-@RequestMapping("/crud_user")
+@RequestMapping("/api/crud_user")
 public class CrudUserController extends CrudController<User, Long> {
 
     @Autowired
