@@ -31,12 +31,12 @@ public class InitUsers implements ApplicationRunner {
         Role roleUser = roleRepository.findByName(RoleEnum.ROLE_USER.getName());
         Role roleAdmin = roleRepository.findByName(RoleEnum.ROLE_USER.getName());
 
-        User user = new User("user", "user", true);
+        User user = new User("user", "password1", true);
         user.setRoles(Arrays.asList(roleUser));
 
         userRepository.save(user);
 
-        User admin = new User("admin", "admin", true);
+        User admin = new User("admin", "password2", true);
         admin.setRoles(Arrays.asList(roleUser, roleAdmin));
 
         userRepository.save(admin);
