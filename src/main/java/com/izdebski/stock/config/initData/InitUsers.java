@@ -41,5 +41,7 @@ public class InitUsers implements ApplicationRunner {
 
         userRepository.save(admin);
 
+        System.out.println("end.");
+
     }
 }
